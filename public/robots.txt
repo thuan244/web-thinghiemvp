@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-username.github.io/web-son-xuyen/sitemap-index.xml
+Sitemap: https://thinghiemvp.com/sitemap-index.xml
