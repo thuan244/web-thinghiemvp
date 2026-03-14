@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<title>LAS-XD 53.003 - Thí Nghiệm &amp; Kiểm Định Xây Dựng VP</title>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<!-- Top Info Bar -->
+<div class="bg-primary text-white py-2 px-4 md:px-10 lg:px-40 hidden md:block">
+<div class="flex justify-between items-center text-xs">
+<div class="flex gap-6">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                    Thôn Kim Sơn 1, xã Kim Trung, Hưng Hà, Thái Bình
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">call</span>
+                    (+84) 392.686.659
+                </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">mail</span>
+                    thinghiemvp@gmail.com
+                </span>
+</div>
+<div class="flex gap-4">
+<a class="hover:text-slate-300" href="#">VN</a>
+<a class="hover:text-slate-300" href="#">EN</a>
+</div>
+</div>
+</div>
+<!-- Header & Navigation -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 md:px-10 lg:px-40 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 flex items-center justify-center bg-primary rounded">
+<img alt="LAS-XD 53.003 Logo" class="h-10 w-10" data-alt="Corporate logo for construction testing lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXcGBBZQ-rbRpd0MOSPVljjZSjkMcpo2ci-j8ayKYUtJyHvCE4tXZ1NRxpdFRgJkAl0LXPyMbPb6mSRIeY9EUfxM1watSKCToi9wr4Ub3O_o51qdJo1gB5jV-OaCTHAlXYEeyqHs30jJdSZmU7tFcO5kI2WUKZ3T1QEwdExWqTx3mJU4UVozA1jPZ4OvpKeYE2gxWmdskDn6Ok58mIN7bIU-ninLQakPLl9B574cDtYbj8NGk2-q0ml4gVKXq5hhNt34CV7rlSuwJZ"/>
+</div>
+<div>
+<h1 class="text-primary dark:text-white font-black text-xl leading-tight">LAS-XD 53.003</h1>
+<p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">VP Construction Lab</p>
+</div>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-primary font-bold text-sm border-b-2 border-primary pb-1" href="#">Trang Chủ</a>
+<a class="text-slate-600 dark:text-slate-300 font-medium text-sm hover:text-primary transition-colors" href="#">Giới Thiệu</a>
+<a class="text-slate-600 dark:text-slate-300 font-medium text-sm hover:text-primary transition-colors" href="#">Dịch Vụ</a>
+<a class="text-slate-600 dark:text-slate-300 font-medium text-sm hover:text-primary transition-colors" href="#">Hồ Sơ Năng Lực</a>
+<a class="text-slate-600 dark:text-slate-300 font-medium text-sm hover:text-primary transition-colors" href="#">Dự Án</a>
+<a class="text-slate-600 dark:text-slate-300 font-medium text-sm hover:text-primary transition-colors" href="#">Liên Hệ</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm pl-10 pr-4 py-2 focus:ring-2 focus:ring-primary w-48 lg:w-64" placeholder="Tìm kiếm..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2 text-slate-400">search</span>
+</div>
+<button class="lg:hidden text-slate-800 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Construction Lab Background" class="w-full h-full object-cover" data-alt="Professional civil engineering laboratory setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzxOSI8BvjeRVcuPuZDaE5gthMXZ9QIxMNAF_luWshR2CPV1Siv1zvoK-qhS2afK13d3uUsOCOiFQXSkzZJBhjBXpb4jTcj_Dmq7fuWkeGJ6nmEfugcAv_dS0aw0F50OvFP4sT5L5EMgp4wytCl3ACVUXeGMbMAlCuUoYiRAfKNIrJHTzgoiG1RmJAcig-t-gCWnhx1NVM36g-eZu6fybC8AUiVermqPvtkFV2Ycc4mqBCQMWWlKFf3heFIE6Nc4t5P-4uNZsm23cD"/>
+<div class="absolute inset-0 bg-primary/60 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative z-10 container mx-auto px-4 text-center text-white">
+<div class="max-w-4xl mx-auto space-y-6">
+<span class="inline-block px-4 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold tracking-widest uppercase">
+                    Uy tín - Chất lượng – Hiệu quả
+                </span>
+<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                    CÔNG TY TNHH XÂY DỰNG VÀ THÍ NGHIỆM KIỂM ĐỊNH VP
+                </h1>
+<p class="text-lg md:text-2xl font-light text-slate-200">
+                    Phòng Thí Nghiệm Vật Liệu Xây Dựng &amp; Kiểm Định Công Trình <span class="font-bold text-white">LAS-XD 53.003</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-slate-100 transition-all shadow-xl">
+                        Xem Hồ Sơ Năng Lực
+                    </button>
+<button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-all">
+                        Liên Hệ Ngay
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 1: About Us -->
+<section class="py-20 px-4 md:px-10 lg:px-40 bg-white dark:bg-slate-900">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="aspect-video rounded-xl overflow-hidden shadow-2xl">
+<img alt="About Our Lab" class="w-full h-full object-cover" data-alt="Engineer testing concrete quality in lab" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_HbApoBs7ealvKl0n3s53pjOe6-ZH8tnaW7UXrgg739oUT5CEGdAXUWKiIHIwMvrZdOORufWl6Qnfr4QqDlMMjGKgIYTOyayvwYSxVx8PrO-2qQRH7AasXyxhedklOuyWbLb0Is8XuevjBBvwUca4KZgwk7d0DyKI05D4sCCM17nP67ut6DP6aZBKGvfCAnQpwryx81ZLX0rXCUTqkc3nZMqWNagxy7KoXNSywLs9yNdOOz1pvYaKTyDadakON0hu5WmZYOQz0Owx"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-xl shadow-xl hidden md:block">
+<p class="text-white text-4xl font-black">10+</p>
+<p class="text-white/80 text-xs font-medium uppercase tracking-widest">Năm Kinh Nghiệm</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<div class="w-10 h-[2px] bg-primary"></div>
+<span class="text-primary font-bold uppercase tracking-widest text-sm">Về Chúng Tôi</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">Đối Tác Tin Cậy Cho Mọi Công Trình</h2>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    CÔNG TY TNHH XÂY DỰNG VÀ THÍ NGHIỆM KIỂM ĐỊNH VP tự hào là đơn vị hàng đầu tại Thái Bình trong lĩnh vực thí nghiệm vật liệu xây dựng và kiểm định chất lượng công trình. Với mã hiệu <span class="font-bold text-primary">LAS-XD 53.003</span>, chúng tôi cam kết mang đến những số liệu chính xác, trung thực, phục vụ tốt nhất cho công tác giám sát và quản lý chất lượng xây dựng.
+                </p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Thiết bị hiện đại, chuẩn hóa</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Đội ngũ kỹ sư chuyên môn cao</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Quy trình chuyên nghiệp ISO</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<span class="text-sm font-medium">Thời gian trả kết quả nhanh</span>
+</li>
+</ul>
+<div class="pt-4">
+<button class="bg-primary/10 text-primary px-6 py-3 rounded font-bold hover:bg-primary hover:text-white transition-all">
+                        Khám phá chi tiết
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Core Services Grid -->
+<section class="py-20 px-4 md:px-10 lg:px-40 bg-background-light dark:bg-background-dark">
+<div class="text-center mb-16 space-y-4">
+<p class="text-primary font-bold uppercase tracking-widest text-sm">Dịch Vụ Của Chúng Tôi</p>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white">Giải Pháp Kiểm Định Toàn Diện</h2>
+<div class="w-20 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group">
+<div class="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Thí Nghiệm Vật Liệu</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    Thử nghiệm các loại vật liệu: Bê tông, cốt thép, xi măng, gạch, cát, đá, nhựa đường và các loại phụ gia xây dựng.
+                </p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                    Tìm hiểu thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group">
+<div class="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Kiểm Định Công Trình</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    Đánh giá an toàn chịu lực, kiểm định chất lượng công trình cũ và mới, tư vấn giải pháp gia cố sửa chữa hiệu quả.
+                </p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                    Tìm hiểu thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border-b-4 border-transparent hover:border-primary group">
+<div class="w-14 h-14 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">foundation</span>
+</div>
+<h3 class="text-xl font-bold mb-4">Khảo Sát Địa Chất</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                    Khoan khảo sát địa chất công trình, thí nghiệm xuyên tĩnh, xuyên tiêu chuẩn (SPT), tư vấn giải pháp móng tối ưu.
+                </p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                    Tìm hiểu thêm <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 3: Why Choose Us -->
+<section class="py-20 px-4 md:px-10 lg:px-40 bg-primary text-white">
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="space-y-6">
+<h2 class="text-3xl font-black">Tại Sao Chọn LAS-XD 53.003?</h2>
+<p class="text-slate-300">Chúng tôi không chỉ cung cấp dịch vụ, chúng tôi cung cấp sự an tâm cho mọi công trình.</p>
+<button class="bg-white text-primary px-6 py-3 rounded font-bold">Liên hệ chuyên gia</button>
+</div>
+<div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-4xl text-slate-300">verified</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Chính Xác Tuyệt Đối</h4>
+<p class="text-sm text-slate-300">Quy trình thí nghiệm nghiêm ngặt theo tiêu chuẩn TCVN và Quốc tế, đảm bảo sai số thấp nhất.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-4xl text-slate-300">speed</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Tiến Độ Nhanh Chóng</h4>
+<p class="text-sm text-slate-300">Cam kết trả kết quả đúng hạn, hỗ trợ kịp thời cho quá trình nghiệm thu của chủ đầu tư.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-4xl text-slate-300">engineering</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Đội Ngũ Chuyên Gia</h4>
+<p class="text-sm text-slate-300">Các kỹ sư, thí nghiệm viên giàu kinh nghiệm, nắm vững các quy chuẩn kỹ thuật hiện hành.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-4xl text-slate-300">payments</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Chi Phí Cạnh Tranh</h4>
+<p class="text-sm text-slate-300">Giá thành hợp lý, tối ưu chi phí cho đối tác mà vẫn đảm bảo chất lượng dịch vụ tốt nhất.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Partners/Clients Slider -->
+<section class="py-16 px-4 md:px-10 lg:px-40 bg-white dark:bg-slate-900">
+<div class="text-center mb-10">
+<h3 class="text-slate-400 font-bold uppercase tracking-[0.3em] text-xs">Đối Tác &amp; Khách Hàng</h3>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+<div class="h-12 w-32 flex items-center justify-center">
+<img alt="Partner 1" class="max-h-full" data-alt="Corporate partner logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFulgSnZPqz4giJQPl0n1He8XsguHexu_-wu9kK5GoDWFjHUwaXCysGqTp6WLZ8mGWO1BZjfGWzz9bDAy0QyO5j7DJ43lP7rWksCrZTYrv2BZphSp33wla2xdqcyDBso8j-n1AxIGbtk25HhtAarheC8mY2t9ZKZKKDKJ93-VjDpzo9zTDTgYx7wiGQ4GQJHa0b1g1Y1FvVoBHIzMsBpOF6n9nRD_pt-sNFm4sAoFRMUeHWoFWHFQVZGVzFrXYj4LEUxkOMppo5LM5"/>
+</div>
+<div class="h-12 w-32 flex items-center justify-center">
+<img alt="Partner 2" class="max-h-full" data-alt="Corporate partner logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYw3b1nAZKqdocL_87LEtWLff3Xg0vUZXiDxmTBjhFjP9Efd5hUJuaNINKaCv1TaudBFSTVTiuYq9_QLoVEON14ZEPnY_6QA0WV03PKfNUndPiS5vBWpHb5KGlDQjdAoLGoECVrJ_hBejxplnRJs3oZ4JsnRilLa-W6JTk_3ag6pHotOzXXZ-gzKTu83Sh5QVUfT8MOdR2Bh7ms42yZC4wjdYc0_V0wW61x61l2cl0N77jwW0t-lCRlIH-9X_qU-kMOoAz4FeHa0t3"/>
+</div>
+<div class="h-12 w-32 flex items-center justify-center">
+<img alt="Partner 3" class="max-h-full" data-alt="Corporate partner logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQjVVUb-xTXeVKDwySyv5fP9KAkFHVMJrGEY4kjN6hcnYSZX8mqD0FbZ6jQkPurJy2b6zcghPum9fW8MGzDAu-iQpxwhxPd_OFjZ5k4bkJHOEhsFtr7TnClxi_2YsM5XGyUynJ5LcVAdhQ0haNGTeBquDO8W2rl2B5D56wByMzpO8vpe5tKlnEx4rAfLTl0npEYEvqmJRNsERhPJiPxStG3VFAGQmQZcqKuEbfyjVQbnK8AjwXI0Z46I8uujUNloLA1dYK9m9CbtyO"/>
+</div>
+<div class="h-12 w-32 flex items-center justify-center">
+<img alt="Partner 4" class="max-h-full" data-alt="Corporate partner logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnPmRMcwxCT7fiIxNSEZ_ZSIyfbdkH2KH_xfFY0pGVa43JKYN4D83pUepG4v0jgzcJTzaMUgP21D6jydDMEcEvHcGTjHRrxES-MjZZwpCO0sRt5gJXJBI4uLl_mrRdowt6AGynPhymhgTdxIU4kJ5avNmlZKgvHaaWIe4tVE5rWTA_LqxESzZi2h6IE3tFU9627OjD8DfvjK_3fA7kl22NqCxUqamLgmcD4Iuz1mIaf9qH_1CUKW8yeFx3b4fOFud-0W17dS5PMntW"/>
+</div>
+<div class="h-12 w-32 flex items-center justify-center">
+<img alt="Partner 5" class="max-h-full" data-alt="Corporate partner logo placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4lOG_x5qav1Yf0fJUceVwdpTco2Ew-2SqPKrJQPaQbl3Qms78DsNTBZj8qBHUdWl8lHcNglu30B1O555viHi_nQ7qMccRP1iMQVk95lPY3C_wCIGs2OljtwY9Yu13jxgnvf_w9zswjZWTKugpkdubpx6w53VcwomEvJbEUAgxXEmfc4_drn2hPDGP6kPYhCjguiU_zFAHZd7Fs2NY-gdFs4yqg_sY_UDwfzwWb1c0zRfZAsLHmtgYZCiEbLYosFkUnhlYrWyBNbmM"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white pt-20 pb-10 px-4 md:px-10 lg:px-40">
+<div class="grid lg:grid-cols-4 gap-12 mb-16">
+<div class="lg:col-span-1 space-y-6">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 flex items-center justify-center bg-white rounded">
+<img alt="Logo Footer" class="h-8 w-8" data-alt="Company logo for footer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPpKRhAJWCSHzECLLOUjoW-Z8G5Wbqu4HvuduSI_emdSHP88XiqWJpc_bGezQbki5qLtfZ7GDaViyQ4TOOjhkPQrwc9WmLr6e6gFJcpbe708Sd2_0Oz9cr1AK4LnXF3254CQSuvgFdrgytLUyvWzSc65PtU6geQqHx4qJ0SzWfTZLSbjH2BNL930mDhvgWKoUYESHeyF9Vi69QyXPB7CnMAwE-0SgGU-Cl4S9JD3uyUc5AxDcfSAT_4vvTrfXrGLl2Qf5Ll0SwgK-K"/>
+</div>
+<h2 class="font-black text-xl">LAS-XD 53.003</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">
+                    Đơn vị uy tín hàng đầu trong lĩnh vực thí nghiệm vật liệu và kiểm định xây dựng tại Việt Nam.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg border-b border-slate-700 pb-2">Thông Tin Liên Hệ</h4>
+<ul class="space-y-4 text-sm text-slate-400">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                        Thôn Kim Sơn 1, xã Kim Trung, Hưng Hà, Thái Bình
+                    </li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">call</span>
+                        (+84) 392.686.659
+                    </li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        thinghiemvp@gmail.com
+                    </li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-sm">badge</span>
+                        MST: 1001277165
+                    </li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg border-b border-slate-700 pb-2">Liên Kết Nhanh</h4>
+<ul class="space-y-2 text-sm text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#">Giới thiệu công ty</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Dịch vụ thí nghiệm</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Kiểm định chất lượng</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tin tức &amp; Sự kiện</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tuyển dụng</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-lg border-b border-slate-700 pb-2">Chứng Nhận</h4>
+<div class="flex items-center gap-4">
+<div class="w-24 h-12 bg-white/10 rounded flex items-center justify-center border border-white/20">
+<span class="text-[8px] font-bold text-center">BỘ XÂY DỰNG<br/>LAS-XD 53.003</span>
+</div>
+<div class="w-24">
+<img alt="Đã Thông Báo Bộ Công Thương" class="w-full" data-alt="Ministry of Industry and Trade certification badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqYIXseCpi2OpByFqAmm1SEfzrle17a_Myjdbkhu8-dNeWYsalsTJwy42UsvQ00Gk_cQQS7H3baAj2nNSbloJuq4vk0fW2xpRLHmbU0c12ChkDbgsJDcRowrRMOAj8m2KLnI-xJk3-JKMzAQiBOO0Lc0VZF4mBEfAylcDUur4rb3rS08GNwbLL7boJYaZoc5C94R5TKiuAYvYmsoDS8nCyMsHeldHgQWxeBz4H2g_aYeW9BQpnL0JnNoB6FE0TzKiZs3FE2XwZ-x6_"/>
+</div>
+</div>
+<div class="bg-slate-800 p-4 rounded text-xs text-slate-400">
+<p class="font-bold text-white mb-1">Đại diện pháp luật:</p>
+<p>Giám đốc: [Tên Giám Đốc]</p>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<p>© 2023 CÔNG TY TNHH XÂY DỰNG VÀ THÍ NGHIỆM KIỂM ĐỊNH VP. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white" href="#">Chính sách bảo mật</a>
+<a class="hover:text-white" href="#">Điều khoản sử dụng</a>
+</div>
+</div>
+</footer>
+</body></html>

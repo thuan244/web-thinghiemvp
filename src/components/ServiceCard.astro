@@ -1,0 +1,24 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  href?: string;
+}
+
+const { icon, title, description, href } = Astro.props;
+---
+
+<div class="bg-white p-8 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 border-b-4 border-transparent hover:border-accent group cursor-pointer">
+  <div class="w-14 h-14 bg-accent/10 text-accent flex items-center justify-center rounded-xl mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+    <Fragment set:html={icon} />
+  </div>
+  <h3 class="text-xl font-heading font-bold mb-3 text-text-primary">{title}</h3>
+  <p class="text-text-secondary text-sm leading-relaxed mb-6">{description}</p>
+  {href && (
+    <a href={href} class="text-accent font-heading font-bold text-sm inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-200 cursor-pointer">
+      Tìm hiểu thêm
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  )}
+</div>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003366",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1923",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-10 py-4 bg-white dark:bg-slate-900 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-4xl">architecture</span>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-[-0.015em] dark:text-slate-100">VP Construction &amp; Testing</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Trang Chủ</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Dự Án</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Dịch Vụ</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal border-b-2 border-primary" href="#">Năng Lực</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Liên Hệ</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden bg-primary/5 dark:bg-slate-800">
+<div class="text-primary flex items-center justify-center px-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 text-sm placeholder:text-slate-400" placeholder="Tìm kiếm thiết bị..."/>
+</div>
+</label>
+<button class="flex min-w-[120px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-transform hover:scale-105 active:scale-95">
+                        Tải Hồ Sơ NL
+                    </button>
+</div>
+</header>
+<main class="flex flex-col flex-1 max-w-[1200px] mx-auto w-full px-6 py-10">
+<!-- Hero Section -->
+<div class="flex flex-col gap-4 mb-12">
+<h1 class="text-slate-900 dark:text-white text-5xl font-black tracking-tight leading-tight">Năng Lực Thiết Bị &amp; Nhân Sự</h1>
+<div class="h-1 w-24 bg-primary rounded-full"></div>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-3xl">VP Construction &amp; Testing tự hào sở hữu hệ thống phòng thí nghiệm LAS-XD đạt chuẩn ISO/IEC 17025 cùng đội ngũ chuyên gia đầu ngành trong lĩnh vực kiểm định xây dựng.</p>
+</div>
+<!-- Section 1: Equipment -->
+<section class="mb-20">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">Hệ Thống Thiết Bị Chuyên Dụng</h2>
+<p class="text-primary font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined">inventory_2</span>
+                                Hơn 100 thiết bị chuyên dụng hiện đại
+                            </p>
+</div>
+<button class="text-primary font-bold hover:underline flex items-center gap-1">
+                            Xem tất cả <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-primary/5 transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="h-56 bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Universal Testing Machine 1000kN for steel testing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD3KWzKDCqfgURuEb_W8Q0ucFdEAQG22DITKlf-q5jSd2yhedIXNHe5heuJPk5ri_eO6myDpEDQ8glggxTapcQzyhWNzPb7RDQHISZdIABe5e16YEZCpLPBnW_ABtOGM6ZB0lmXBYY_h5BreNnrva_PhwJWZYlR8V4e0kztsvokxd8aofLYP8qqx9QJ18Uey0li5kJ4MsCOf1lwznKMK1L0FkMzK7FMUtUG936DgVQX1a_LDzLRJVq63s5J0UPoP_IZja-UDxwBNA1"/>
+</div>
+<div class="p-6">
+<div class="text-xs font-bold text-primary mb-2 uppercase tracking-widest">Thử Nghiệm Cơ Lý</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Universal Testing Machine 1000kN</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Thiết bị thí nghiệm kéo, nén, uốn các loại thép cường độ cao và vật liệu kim loại xây dựng với độ chính xác tuyệt đối.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-primary/5 transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="h-56 bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Large Concrete Compression Machine 2000KN" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpcdx2lP4GGNd0F4DRCU7RosK8F0liA54yfeT838OvttG3fL8DQ4c9AQY30f_rP2iLchu3rSgJ78zXMa9ElJXHtv-BtlQaRbE8yTJ4eYpgBs0DZ3vgXQD4YTjiq6YRelYnRfC6UE1P_L5y_IzeTdeD0qtaIgPk00n6ljmmmPK2eLQTCcio4VPzcm6NDU1qdzJvpZWNLv7oK2I5DD1-Ju-h6hmE8z1jfLA33wZXOxrykJ4o20i9H_PQydadE8OBWsD5o9WR-qX08mWi"/>
+</div>
+<div class="p-6">
+<div class="text-xs font-bold text-primary mb-2 uppercase tracking-widest">Thí Nghiệm Bê Tông</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Concrete Compression Machine 2000KN</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Hệ thống máy nén bê tông tự động, xác định cường độ chịu nén của các mẫu bê tông xi măng, vữa xây dựng.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-primary/5 transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="h-56 bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="Ultrasonic Pulse Velocity device for concrete testing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3-8p2WYthxYHDkFsRd5WdsyWLmWkh4EekM-j8YRHGyQo8KpJnjUfvPrQcnWzbLPB-aaJ28PRHHggzZx3ph9sae7j1o1xuItlSJfY_rqBpSkRAp-tY7aVJYfjENT3LsTrZOr0XNa3NGkvkGobWljK5RoEawFqPrL8ARrG2VuHynPTBzIxNMEQJkJnEYAlwydRa0kxo_zMAp1GKlypmuAm-qFgHFdTPQCycNNwSyp4EMFgKtrrLXMd8n5ApEbKN9n2vDL7A2RDQNCE-"/>
+</div>
+<div class="p-6">
+<div class="text-xs font-bold text-primary mb-2 uppercase tracking-widest">Kiểm Định Phi Phá Hoại</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Ultrasonic Pulse Velocity Device</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Thiết bị đo vận tốc xung siêu âm nhằm đánh giá độ đồng nhất và khuyết tật bên trong cấu kiện bê tông.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Our Team -->
+<section class="mb-20">
+<div class="mb-12 text-center">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Đội Ngũ Chuyên Gia</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Tập hợp những kỹ sư, kỹ thuật viên có bề dày kinh nghiệm, am hiểu sâu sắc về các tiêu chuẩn kỹ thuật Việt Nam và Quốc tế.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Profile 1 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col items-center text-center">
+<div class="size-32 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="KS. Nguyễn Văn Thành - Trưởng phòng thí nghiệm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDObVdoBZdRKMmQaRFxviQD121fVgsJYEvsiNWygKJkwhT9p5BF8cmKsBTv4qZsqCL3L9sEk9SsQNcN0eWCXMDdSZbYjX-fH1jT7euStgr_XcXm7Osh4cUCfs9CgKKP1y8irZnbqjpFynHvpIvfCtSGWtucvuppTLtDB3Y-6JlSUWZKD2dHBp9ZdR0-JyAuHlbD8zmnw7_d0dLqEfVi28AKGAYyuEqimySY0SbA-f45ytnQDiKd-H-SxiGEMYGjrlAZT0tzK8HSiToa"/>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">KS. Nguyễn Văn Thành</h4>
+<p class="text-primary font-semibold text-sm mb-3">Trưởng phòng thí nghiệm</p>
+<p class="text-slate-500 text-xs leading-relaxed">Hơn 15 năm kinh nghiệm quản lý LAS-XD và kiểm định chất lượng công trình dân dụng.</p>
+<div class="flex gap-3 mt-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">mail</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">call</span>
+</div>
+</div>
+<!-- Profile 2 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col items-center text-center">
+<div class="size-32 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="KS. Lương Thanh Sơn - Phó phòng thí nghiệm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKsXGX8cpV2EjPa4p80lA1ipe5X3nC1Cq3SCVo3NdfqyHb03d6fzLUGMRg5thS1fgC1BUfYkhqiOLqnIr2eRMgUAcaK3nbg9i8qG115pI6De7QiVdcEraIoYaILWHDM1CjAEFA7hLrvXqbB4BGKQLS-kRdPrJAfEa5R2T5Koty3-ztHMQYioa2BsDVrW2Duq4zDcZakclwlp914L4HJgXBIBIoy1BfcqC0wETsmtTH2ljmfio7s7_M0KlarIMyfdd4y404-FmGi6AY"/>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">KS. Lương Thanh Sơn</h4>
+<p class="text-primary font-semibold text-sm mb-3">Phó phòng thí nghiệm</p>
+<p class="text-slate-500 text-xs leading-relaxed">Chuyên gia về thí nghiệm địa kỹ thuật và quan trắc lún công trình cao tầng.</p>
+<div class="flex gap-3 mt-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">mail</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">call</span>
+</div>
+</div>
+<!-- Profile 3 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col items-center text-center">
+<div class="size-32 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Kỹ thuật viên thí nghiệm hiện trường" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8er_kTdvRBkyaF4lP1qkA-EOOld0lRfSEMkSBgihGAlkjx4JHwi8n19sR6QdF-R3QBnAN9KuSYfkp79vOBx6Jg9knbObXFBdlxv_KRmDjrw5NVxUzifuGJUD7c3HVbQW1jY6sgfIjLqWaZ2pNyMZLy7Nwbjzu02Ewzx734TPk9HHFu26LiphmPqAQpZE3kzo2xlZ5RxT90Rd7jcSZLkRdJBthbXxfk4G4VI478mlN70TWgGNP0qA7tIDnZYtWzMjYcs77q_SfEIzH"/>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">KS. Trần Minh Hiếu</h4>
+<p class="text-primary font-semibold text-sm mb-3">Kỹ thuật viên trưởng</p>
+<p class="text-slate-500 text-xs leading-relaxed">Phụ trách công tác thí nghiệm hiện trường và bàn giao kết quả nhanh chóng, chính xác.</p>
+<div class="flex gap-3 mt-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">mail</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">call</span>
+</div>
+</div>
+<!-- Profile 4 -->
+<div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col items-center text-center">
+<div class="size-32 rounded-full overflow-hidden mb-4 border-4 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Kỹ thuật viên thí nghiệm vật liệu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgrbjxN_jCTiI9m1UnFl79k2xDPBCBTJ45z8hK3g3Hmzl7td3rcTIMI05qDJoon8AmSrFJ038uEgR0IwLflZoz6YwQssP1AgwIqlcIXGDQ3WHKnVyG_WwJjHBoxh83GtTGiSIeHYIMC2kraRM0toFfN1IruzZYlbxuRcVI7nYcx_rDmcjLQkvO_dJlB-1crsSP5gFA6TS9xxr9WN_toSUA95fkQHUM7LUIOTzwff_-RSDUHb5uCzNEEurWcdnkCTQ-YBTGeZP4BA-l"/>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">KS. Lê Hoàng Long</h4>
+<p class="text-primary font-semibold text-sm mb-3">Chuyên viên thí nghiệm</p>
+<p class="text-slate-500 text-xs leading-relaxed">Kiểm soát quy trình thí nghiệm vật liệu xây dựng mới và tư vấn giải pháp kỹ thuật.</p>
+<div class="flex gap-3 mt-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">mail</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer text-lg">call</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-300 py-16 px-10">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 text-white mb-6">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+<h2 class="text-xl font-bold">VP Construction</h2>
+</div>
+<p class="text-sm leading-relaxed mb-6">Đơn vị tư vấn, kiểm định và thí nghiệm vật liệu xây dựng hàng đầu Việt Nam.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-white">social_leaderboard</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white">share</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Dịch vụ</h4>
+<ul class="space-y-4 text-sm">
+<li class="hover:text-white cursor-pointer">Thí nghiệm vật liệu LAS-XD</li>
+<li class="hover:text-white cursor-pointer">Kiểm định công trình</li>
+<li class="hover:text-white cursor-pointer">Khảo sát địa chất</li>
+<li class="hover:text-white cursor-pointer">Tư vấn giám sát</li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Liên kết nhanh</h4>
+<ul class="space-y-4 text-sm">
+<li class="hover:text-white cursor-pointer">Hồ sơ năng lực</li>
+<li class="hover:text-white cursor-pointer">Dự án tiêu biểu</li>
+<li class="hover:text-white cursor-pointer">Tin tức chuyên ngành</li>
+<li class="hover:text-white cursor-pointer">Tuyển dụng</li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Liên hệ</h4>
+<div class="space-y-4 text-sm">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span>123 Đường Số 7, Phường Thảo Điền, TP. Thủ Đức, TP. HCM</span>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+<span>(+84) 28 3840 0000</span>
+</div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>contact@vpconstruction.com.vn</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500">
+                    © 2024 VP Construction &amp; Testing Service Co., Ltd. All rights reserved.
+                </div>
+</footer>
+</div>
+</div>
+</body></html>

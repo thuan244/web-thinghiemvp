@@ -1,0 +1,20 @@
+{
+  "name": "web-son-xuyen",
+  "version": "1.0.0",
+  "description": "Website VP Construction & Testing - LAS-XD 53.003",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "author": "VP Construction & Testing",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.4",
+    "tailwindcss": "^4.2.1"
+  }
+}

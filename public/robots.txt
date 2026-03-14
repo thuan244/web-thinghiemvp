@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://your-username.github.io/web-son-xuyen/sitemap-index.xml

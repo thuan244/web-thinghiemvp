@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const base = import.meta.env.BASE_URL;
+
+const documents = [
+  { tag: 'Mã số thuế', title: 'Giấy ĐKKD (MST 1001277165)', desc: 'Giấy chứng nhận đăng ký kinh doanh do Sở KH&ĐT tỉnh Thái Bình cấp.' },
+  { tag: 'Phòng thí nghiệm', title: 'Quyết định LAS-XD 53.003', desc: 'Quyết định công nhận phòng thí nghiệm chuyên ngành xây dựng do Bộ Xây Dựng cấp.' },
+  { tag: 'Năng lực thí nghiệm', title: 'Danh mục 128 chỉ tiêu', desc: 'Danh mục chi tiết 128 chỉ tiêu thí nghiệm được phép thực hiện theo quyết định LAS-XD.' },
+  { tag: 'Chất lượng', title: 'Giấy hiệu chuẩn thiết bị', desc: 'Chứng chỉ hiệu chuẩn định kỳ cho toàn bộ hệ thống thiết bị thí nghiệm và đo lường.' },
+  { tag: 'Nhân sự', title: 'Chứng chỉ đào tạo nhân sự', desc: 'Chứng chỉ đào tạo chuyên môn cho đội ngũ kỹ sư và thí nghiệm viên của công ty.' },
+];
+
+const tabs = ['Tất cả tài liệu', 'Giấy phép kinh doanh', 'Chứng chỉ LAS-XD', 'Hiệu chuẩn & Đào tạo'];
+---
+
+<BaseLayout title="Hồ Sơ Pháp Lý | VP Construction & Testing - LAS-XD 53.003">
+
+  <PageHero
+    title="Hồ Sơ Pháp Lý & Chứng Chỉ"
+    description="Cam kết tuân thủ nghiêm ngặt các quy định pháp luật và tiêu chuẩn khắt khe trong ngành xây dựng."
+    breadcrumb="Hồ Sơ Pháp Lý"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12">
+    <!-- Filter tabs -->
+    <div class="flex overflow-x-auto gap-6 pb-6 mb-10 border-b border-border">
+      {tabs.map((tab, i) => (
+        <button class:list={[
+          'whitespace-nowrap pb-2 text-sm font-heading font-bold uppercase tracking-wider transition-colors duration-200 cursor-pointer',
+          i === 0
+            ? 'text-accent border-b-2 border-accent'
+            : 'text-text-muted hover:text-accent'
+        ]}>
+          {tab}
+        </button>
+      ))}
+    </div>
+
+    <!-- Document Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {documents.map(doc => (
+        <div class="group bg-white rounded-xl overflow-hidden border border-border shadow-card hover:shadow-card-hover transition-all duration-300 cursor-pointer">
+          <!-- Document preview area -->
+          <div class="aspect-[3/4] bg-gradient-to-br from-primary/5 to-accent/5 relative flex items-center justify-center">
+            <div class="text-center p-8">
+              <svg class="w-16 h-16 mx-auto text-primary/20 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <p class="text-text-muted text-sm font-medium">{doc.title}</p>
+            </div>
+            <!-- Overlay on hover -->
+            <div class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div class="bg-white text-primary p-4 rounded-full shadow-hero flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                <span class="font-heading font-bold text-sm pr-1">Xem tài liệu</span>
+              </div>
+            </div>
+            <!-- Tag -->
+            <span class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] font-bold px-3 py-1 rounded uppercase tracking-widest">{doc.tag}</span>
+          </div>
+          <!-- Card footer -->
+          <div class="p-5 border-t border-border">
+            <h3 class="font-heading font-bold text-text-primary mb-1">{doc.title}</h3>
+            <p class="text-text-muted text-xs">{doc.desc}</p>
+          </div>
+        </div>
+      ))}
+
+      <!-- Request card -->
+      <div class="flex flex-col justify-center items-center p-12 bg-accent/5 border-2 border-dashed border-accent/20 rounded-xl hover:bg-accent/10 transition-colors duration-200 cursor-pointer">
+        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-accent shadow-card mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+        </div>
+        <h3 class="text-accent font-heading font-bold text-lg mb-2">Yêu cầu tài liệu</h3>
+        <p class="text-text-muted text-center text-sm leading-relaxed">Cần chứng chỉ cụ thể không có trong danh sách? Liên hệ bộ phận pháp chế.</p>
+      </div>
+    </div>
+
+    <!-- Info box -->
+    <div class="mt-12 p-6 bg-accent/5 rounded-xl flex items-start gap-4 border-l-4 border-accent">
+      <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <div>
+        <h4 class="font-heading font-bold text-text-primary">Chế độ xem tài liệu</h4>
+        <p class="text-text-secondary text-sm mt-1">
+          Mọi hồ sơ pháp lý và chứng chỉ đều được cập nhật định kỳ, đảm bảo tính hiệu lực và minh bạch cao nhất. Liên hệ để nhận bản scan hoặc PDF chính thức.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>
