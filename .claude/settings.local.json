@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lh /c/Users/admin/Desktop/web-son-xuyen/*.html)",
+      "Bash(wc -l /c/Users/admin/Desktop/web-son-xuyen/*.html)",
+      "Bash(python3 .agent/.shared/ui-ux-pro-max/scripts/search.py \"construction testing lab professional corporate service\" --design-system -p \"VP Construction LAS-XD 53.003\" --persist)",
+      "Bash(python .agent/.shared/ui-ux-pro-max/scripts/search.py \"construction testing lab professional corporate service\" --design-system -p \"VP Construction LAS-XD 53.003\" --persist)",
+      "Bash(python .agent/.shared/ui-ux-pro-max/scripts/search.py \"construction engineering corporate professional\" --domain landing -n 5)",
+      "Bash(python .agent/.shared/ui-ux-pro-max/scripts/search.py \"corporate professional trust authority\" --domain style -n 5)",
+      "Bash(python -c \"from PIL import Image; img1=Image.open\\(''c:/Users/admin/Desktop/web-son-xuyen/logo cty VP/logo VP.png''\\); img2=Image.open\\(''c:/Users/admin/Desktop/web-son-xuyen/logo cty VP/logo VP 2.png''\\); print\\(f''logo VP.png: {img1.size}, mode={img1.mode}''\\); print\\(f''logo VP 2.png: {img2.size}, mode={img2.mode}''\\)\")",
+      "Bash(npm --version)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx astro:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm ls:*)",
+      "Bash(gh auth:*)",
+      "Bash(cmd.exe /c \"rename \"\"C:\\\\Users\\\\admin\\\\Desktop\\\\web-son-xuyen\"\" web-thinghiemvp\")",
+      "Bash(git init:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
