@@ -1,5 +1,5 @@
 ---
-import { getTopLevelItems } from '../data/phongThiNghiem';
+import { getTopLevelItems } from "../data/phongThiNghiem";
 
 const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
@@ -13,46 +13,105 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: `${base}`, label: 'Trang Chủ' },
-  { href: `${base}gioi-thieu/`, label: 'Giới Thiệu' },
-  { href: `${base}dich-vu/`, label: 'Dịch Vụ' },
-  { href: `${base}nang-luc/`, label: 'Năng Lực' },
+  { href: `${base}`, label: "Trang Chủ" },
+  { href: `${base}gioi-thieu/`, label: "Giới Thiệu" },
+  { href: `${base}dich-vu/`, label: "Dịch Vụ" },
+  { href: `${base}nang-luc/`, label: "Năng Lực" },
   {
     href: `${base}phong-thi-nghiem/`,
-    label: 'Phòng Thí Nghiệm',
+    label: "Phòng Thí Nghiệm",
     children: labDropdownItems,
   },
-  { href: `${base}lien-he/`, label: 'Liên Hệ' },
+  { href: `${base}lien-he/`, label: "Liên Hệ" },
 ];
 ---
 
 <!-- Top Info Bar -->
 <div class="bg-primary text-white py-2 px-4 md:px-10 lg:px-20 hidden md:block">
-  <div class="max-w-7xl mx-auto flex justify-between items-center text-xs font-body">
+  <div
+    class="max-w-7xl mx-auto flex justify-between items-center text-xs font-body"
+  >
     <div class="flex gap-6">
       <span class="flex items-center gap-1.5">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        Thôn Kim Sơn 1, xã Kim Trung, Hưng Hà, Thái Bình
+        <svg
+          class="w-3.5 h-3.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+          ></path><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg
+        >
+        Thôn Kim Sơn 1, xã Hưng Hà, Tỉnh Hưng Yên
       </span>
-      <a href="tel:+84392686659" class="flex items-center gap-1.5 hover:text-gold-light transition-colors cursor-pointer">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      <a
+        href="tel:+84392686659"
+        class="flex items-center gap-1.5 hover:text-gold-light transition-colors cursor-pointer"
+      >
+        <svg
+          class="w-3.5 h-3.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          ></path></svg
+        >
         (+84) 392.686.659
       </a>
-      <a href="mailto:thinghiemvp@gmail.com" class="flex items-center gap-1.5 hover:text-gold-light transition-colors cursor-pointer">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      <a
+        href="mailto:thinghiemvp@gmail.com"
+        class="flex items-center gap-1.5 hover:text-gold-light transition-colors cursor-pointer"
+      >
+        <svg
+          class="w-3.5 h-3.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          ></path></svg
+        >
         thinghiemvp@gmail.com
       </a>
     </div>
     <div class="flex items-center gap-2 text-white/70">
-      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <svg
+        class="w-3.5 h-3.5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        ><path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
+      >
       <span>07:30 - 17:30 (T2 - T7)</span>
     </div>
   </div>
 </div>
 
 <!-- Main Header -->
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 h-20 flex items-center justify-between">
+<header
+  class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 h-20 flex items-center justify-between"
+  >
     <!-- Logo -->
     <a href={`${base}`} class="flex items-center gap-3 cursor-pointer group">
       <img
@@ -63,61 +122,85 @@ const navLinks: NavLink[] = [
         height="48"
       />
       <div>
-        <h1 class="text-primary font-heading font-extrabold text-lg leading-tight tracking-tight">LAS-XD 53.003</h1>
-        <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-text-secondary">VP Construction & Testing</p>
+        <h1
+          class="text-primary font-heading font-extrabold text-lg leading-tight tracking-tight"
+        >
+          LAS-XD 53.003
+        </h1>
+        <p
+          class="text-[10px] font-semibold uppercase tracking-[0.15em] text-text-secondary"
+        >
+          VP Construction & Testing
+        </p>
       </div>
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden lg:flex items-center gap-8">
-      {navLinks.map(link => {
-        const isActive = currentPath === link.href || (link.href !== `${base}` && currentPath.startsWith(link.href));
-        return link.children ? (
-          <div class="relative group">
+      {
+        navLinks.map((link) => {
+          const isActive =
+            currentPath === link.href ||
+            (link.href !== `${base}` && currentPath.startsWith(link.href));
+          return link.children ? (
+            <div class="relative group">
+              <a
+                href={link.href}
+                class:list={[
+                  "text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer py-1 inline-flex items-center gap-1",
+                  isActive
+                    ? "text-primary border-b-2 border-primary"
+                    : "text-text-secondary hover:text-primary",
+                ]}
+              >
+                {link.label}
+                <svg
+                  class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="bg-white rounded-xl border border-border shadow-lg py-2 min-w-[280px]">
+                  {link.children.map((child) => (
+                    <a
+                      href={child.href}
+                      class:list={[
+                        "block px-4 py-2.5 text-sm font-medium transition-colors duration-150",
+                        currentPath.startsWith(child.href)
+                          ? "text-primary bg-primary/5"
+                          : "text-text-secondary hover:text-primary hover:bg-primary/5",
+                      ]}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
             <a
               href={link.href}
               class:list={[
-                'text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer py-1 inline-flex items-center gap-1',
+                "text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer py-1",
                 isActive
-                  ? 'text-primary border-b-2 border-primary'
-                  : 'text-text-secondary hover:text-primary'
+                  ? "text-primary border-b-2 border-primary"
+                  : "text-text-secondary hover:text-primary",
               ]}
             >
               {link.label}
-              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </a>
-            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="bg-white rounded-xl border border-border shadow-lg py-2 min-w-[280px]">
-                {link.children.map(child => (
-                  <a
-                    href={child.href}
-                    class:list={[
-                      'block px-4 py-2.5 text-sm font-medium transition-colors duration-150',
-                      currentPath.startsWith(child.href)
-                        ? 'text-primary bg-primary/5'
-                        : 'text-text-secondary hover:text-primary hover:bg-primary/5'
-                    ]}
-                  >
-                    {child.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        ) : (
-          <a
-            href={link.href}
-            class:list={[
-              'text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer py-1',
-              isActive
-                ? 'text-primary border-b-2 border-primary'
-                : 'text-text-secondary hover:text-primary'
-            ]}
-          >
-            {link.label}
-          </a>
-        );
-      })}
+          );
+        })
+      }
     </nav>
 
     <!-- CTA + Mobile Menu -->
@@ -126,7 +209,18 @@ const navLinks: NavLink[] = [
         href={`${base}lien-he/`}
         class="hidden sm:inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg text-sm font-heading font-bold hover:bg-primary-light transition-colors duration-200 cursor-pointer shadow-md shadow-primary/20"
       >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <svg
+          class="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          ></path></svg
+        >
         Liên Hệ Ngay
       </a>
 
@@ -137,70 +231,114 @@ const navLinks: NavLink[] = [
         aria-label="Mở menu"
         aria-expanded="false"
       >
-        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <svg
+          id="menu-icon-open"
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path></svg
+        >
+        <svg
+          id="menu-icon-close"
+          class="w-6 h-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path></svg
+        >
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden lg:hidden border-t border-border bg-white">
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-border bg-white"
+  >
     <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-      {navLinks.map(link => {
-        const isActive = currentPath === link.href || (link.href !== `${base}` && currentPath.startsWith(link.href));
-        return link.children ? (
-          <div>
-            <div class="flex items-center">
-              <a
-                href={link.href}
-                class:list={[
-                  'flex-1 px-4 py-3 rounded-lg text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer',
-                  isActive
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-text-secondary hover:bg-bg-light hover:text-primary'
-                ]}
-              >
-                {link.label}
-              </a>
-              <button
-                class="mobile-dropdown-toggle p-3 text-text-muted hover:text-primary transition-colors cursor-pointer"
-                aria-label="Mở menu con"
-                aria-expanded="false"
-              >
-                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-            </div>
-            <div class="mobile-dropdown-content hidden pl-4 pb-2">
-              {link.children.map(child => (
+      {
+        navLinks.map((link) => {
+          const isActive =
+            currentPath === link.href ||
+            (link.href !== `${base}` && currentPath.startsWith(link.href));
+          return link.children ? (
+            <div>
+              <div class="flex items-center">
                 <a
-                  href={child.href}
+                  href={link.href}
                   class:list={[
-                    'block px-4 py-2 rounded-lg text-sm transition-colors duration-150',
-                    currentPath.startsWith(child.href)
-                      ? 'text-primary bg-primary/5 font-semibold'
-                      : 'text-text-muted hover:text-primary hover:bg-bg-light'
+                    "flex-1 px-4 py-3 rounded-lg text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer",
+                    isActive
+                      ? "bg-primary/10 text-primary"
+                      : "text-text-secondary hover:bg-bg-light hover:text-primary",
                   ]}
                 >
-                  {child.label}
+                  {link.label}
                 </a>
-              ))}
+                <button
+                  class="mobile-dropdown-toggle p-3 text-text-muted hover:text-primary transition-colors cursor-pointer"
+                  aria-label="Mở menu con"
+                  aria-expanded="false"
+                >
+                  <svg
+                    class="w-4 h-4 transition-transform duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="mobile-dropdown-content hidden pl-4 pb-2">
+                {link.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class:list={[
+                      "block px-4 py-2 rounded-lg text-sm transition-colors duration-150",
+                      currentPath.startsWith(child.href)
+                        ? "text-primary bg-primary/5 font-semibold"
+                        : "text-text-muted hover:text-primary hover:bg-bg-light",
+                    ]}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        ) : (
-          <a
-            href={link.href}
-            class:list={[
-              'px-4 py-3 rounded-lg text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer',
-              isActive
-                ? 'bg-primary/10 text-primary'
-                : 'text-text-secondary hover:bg-bg-light hover:text-primary'
-            ]}
-          >
-            {link.label}
-          </a>
-        );
-      })}
-      <a href={`${base}lien-he/`} class="mt-2 flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-lg text-sm font-heading font-bold cursor-pointer">
+          ) : (
+            <a
+              href={link.href}
+              class:list={[
+                "px-4 py-3 rounded-lg text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer",
+                isActive
+                  ? "bg-primary/10 text-primary"
+                  : "text-text-secondary hover:bg-bg-light hover:text-primary",
+              ]}
+            >
+              {link.label}
+            </a>
+          );
+        })
+      }
+      <a
+        href={`${base}lien-he/`}
+        class="mt-2 flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-lg text-sm font-heading font-bold cursor-pointer"
+      >
         Liên Hệ Ngay
       </a>
     </nav>
@@ -208,26 +346,31 @@ const navLinks: NavLink[] = [
 </header>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const iconOpen = document.getElementById('menu-icon-open');
-  const iconClose = document.getElementById('menu-icon-close');
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("menu-icon-open");
+  const iconClose = document.getElementById("menu-icon-close");
 
-  btn?.addEventListener('click', () => {
-    const isOpen = !menu?.classList.contains('hidden');
-    menu?.classList.toggle('hidden');
-    iconOpen?.classList.toggle('hidden');
-    iconClose?.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', String(!isOpen));
+  btn?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    menu?.classList.toggle("hidden");
+    iconOpen?.classList.toggle("hidden");
+    iconClose?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", String(!isOpen));
   });
 
-  document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.closest('div')?.querySelector('.mobile-dropdown-content');
-      const icon = toggle.querySelector('svg');
-      content?.classList.toggle('hidden');
-      icon?.classList.toggle('rotate-180');
-      toggle.setAttribute('aria-expanded', String(!content?.classList.contains('hidden')));
+  document.querySelectorAll(".mobile-dropdown-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const content = toggle
+        .closest("div")
+        ?.querySelector(".mobile-dropdown-content");
+      const icon = toggle.querySelector("svg");
+      content?.classList.toggle("hidden");
+      icon?.classList.toggle("rotate-180");
+      toggle.setAttribute(
+        "aria-expanded",
+        String(!content?.classList.contains("hidden")),
+      );
     });
   });
 </script>
