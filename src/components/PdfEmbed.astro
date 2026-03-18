@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  pdfs: { name: string; path: string }[];
+}
+
+const { title, pdfs } = Astro.props;
+const singlePdf = pdfs.length === 1;
+---
+
+{singlePdf ? (
+  <div class="bg-white rounded-xl border border-border shadow-card overflow-hidden">
+    <div class="p-5 border-b border-border flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <h2 class="font-heading font-bold text-text-primary text-lg">{title}</h2>
+      </div>
+      <a href={encodeURI(pdfs[0].path)} download class="inline-flex items-center gap-2 bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        Tải xuống
+      </a>
+    </div>
+    <iframe src={encodeURI(pdfs[0].path)} class="w-full border-0" style="height: 85vh;" title={title}></iframe>
+  </div>
+) : (
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {pdfs.map(pdf => (
+      <a href={encodeURI(pdf.path)} target="_blank" rel="noopener noreferrer" class="group bg-white rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden">
+        <div class="aspect-[4/3] bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
+          <div class="text-center p-6">
+            <svg class="w-14 h-14 mx-auto text-primary/30 mb-3 group-hover:text-primary/50 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <p class="text-text-muted text-sm font-medium">{pdf.name}</p>
+          </div>
+        </div>
+        <div class="p-4 border-t border-border flex items-center justify-between">
+          <h3 class="font-heading font-bold text-text-primary text-sm">{pdf.name}</h3>
+          <span class="text-primary text-xs font-semibold group-hover:underline">Xem PDF</span>
+        </div>
+      </a>
+    ))}
+  </div>
+)}

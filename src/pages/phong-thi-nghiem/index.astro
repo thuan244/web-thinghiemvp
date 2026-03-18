@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import DirectoryListing from '../../components/DirectoryListing.astro';
+import { labTree } from '../../data/phongThiNghiem';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Phòng Thí Nghiệm | VP Construction & Testing - LAS-XD 53.003">
+
+  <PageHero
+    title="Phòng Thí Nghiệm"
+    description="Hệ thống tài liệu phòng thí nghiệm chuyên ngành xây dựng LAS-XD 53.003."
+    breadcrumb="Phòng Thí Nghiệm"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12">
+    <DirectoryListing children={labTree} basePath={`${base}phong-thi-nghiem/`} />
+  </div>
+
+</BaseLayout>

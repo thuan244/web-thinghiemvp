@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import PdfEmbed from '../../components/PdfEmbed.astro';
+import DirectoryListing from '../../components/DirectoryListing.astro';
+import { getAllPaths, findNodeBySlugPath, getBreadcrumbs } from '../../data/phongThiNghiem';
+
+export function getStaticPaths() {
+  return getAllPaths().map(segments => ({
+    params: { slug: segments.join('/') },
+    props: { segments },
+  }));
+}
+
+const { segments } = Astro.props;
+const node = findNodeBySlugPath(segments)!;
+const base = import.meta.env.BASE_URL;
+const breadcrumbs = getBreadcrumbs(segments, base);
+const currentPath = `${base}phong-thi-nghiem/${segments.join('/')}/`;
+---
+
+<BaseLayout title={`${node.label} | VP Construction & Testing`}>
+
+  <PageHero
+    title={node.label}
+    breadcrumb={breadcrumbs}
+  />
+
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12">
+    {node.type === 'pdf' && node.pdfs ? (
+      <PdfEmbed title={node.label} pdfs={node.pdfs} />
+    ) : node.children ? (
+      <DirectoryListing children={node.children} basePath={currentPath} />
+    ) : null}
+  </div>
+
+</BaseLayout>

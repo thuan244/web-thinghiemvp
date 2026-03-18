@@ -1,12 +1,18 @@
 ---
+interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
 interface Props {
   title: string;
   description?: string;
-  breadcrumb?: string;
+  breadcrumb?: string | BreadcrumbItem[];
 }
 
 const { title, description, breadcrumb } = Astro.props;
 const base = import.meta.env.BASE_URL;
+const isArray = Array.isArray(breadcrumb);
 ---
 
 <section class="relative bg-primary py-16 md:py-24 overflow-hidden">
@@ -20,8 +26,23 @@ const base = import.meta.env.BASE_URL;
     {breadcrumb && (
       <nav class="mb-6 text-sm text-white/60" aria-label="Breadcrumb">
         <a href={`${base}`} class="hover:text-white transition-colors cursor-pointer">Trang Chủ</a>
-        <span class="mx-2">/</span>
-        <span class="text-white font-semibold">{breadcrumb}</span>
+        {isArray ? (
+          (breadcrumb as BreadcrumbItem[]).map((item, i, arr) => (
+            <>
+              <span class="mx-2">/</span>
+              {i < arr.length - 1 ? (
+                <a href={item.href} class="hover:text-white transition-colors cursor-pointer">{item.label}</a>
+              ) : (
+                <span class="text-white font-semibold">{item.label}</span>
+              )}
+            </>
+          ))
+        ) : (
+          <>
+            <span class="mx-2">/</span>
+            <span class="text-white font-semibold">{breadcrumb}</span>
+          </>
+        )}
       </nav>
     )}
     <h1 class="text-4xl md:text-5xl font-heading font-extrabold text-white leading-tight max-w-3xl">{title}</h1>

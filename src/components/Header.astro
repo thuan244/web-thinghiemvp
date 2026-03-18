@@ -1,13 +1,27 @@
 ---
+import { getTopLevelItems } from '../data/phongThiNghiem';
+
 const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 
-const navLinks = [
+const labDropdownItems = getTopLevelItems(base);
+
+interface NavLink {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+}
+
+const navLinks: NavLink[] = [
   { href: `${base}`, label: 'Trang Chủ' },
   { href: `${base}gioi-thieu/`, label: 'Giới Thiệu' },
   { href: `${base}dich-vu/`, label: 'Dịch Vụ' },
   { href: `${base}nang-luc/`, label: 'Năng Lực' },
-  { href: `${base}ho-so-phap-ly/`, label: 'Hồ Sơ Pháp Lý' },
+  {
+    href: `${base}phong-thi-nghiem/`,
+    label: 'Phòng Thí Nghiệm',
+    children: labDropdownItems,
+  },
   { href: `${base}lien-he/`, label: 'Liên Hệ' },
 ];
 ---
@@ -58,7 +72,39 @@ const navLinks = [
     <nav class="hidden lg:flex items-center gap-8">
       {navLinks.map(link => {
         const isActive = currentPath === link.href || (link.href !== `${base}` && currentPath.startsWith(link.href));
-        return (
+        return link.children ? (
+          <div class="relative group">
+            <a
+              href={link.href}
+              class:list={[
+                'text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer py-1 inline-flex items-center gap-1',
+                isActive
+                  ? 'text-primary border-b-2 border-primary'
+                  : 'text-text-secondary hover:text-primary'
+              ]}
+            >
+              {link.label}
+              <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white rounded-xl border border-border shadow-lg py-2 min-w-[280px]">
+                {link.children.map(child => (
+                  <a
+                    href={child.href}
+                    class:list={[
+                      'block px-4 py-2.5 text-sm font-medium transition-colors duration-150',
+                      currentPath.startsWith(child.href)
+                        ? 'text-primary bg-primary/5'
+                        : 'text-text-secondary hover:text-primary hover:bg-primary/5'
+                    ]}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
           <a
             href={link.href}
             class:list={[
@@ -102,7 +148,45 @@ const navLinks = [
     <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
       {navLinks.map(link => {
         const isActive = currentPath === link.href || (link.href !== `${base}` && currentPath.startsWith(link.href));
-        return (
+        return link.children ? (
+          <div>
+            <div class="flex items-center">
+              <a
+                href={link.href}
+                class:list={[
+                  'flex-1 px-4 py-3 rounded-lg text-sm font-heading font-semibold transition-colors duration-200 cursor-pointer',
+                  isActive
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-text-secondary hover:bg-bg-light hover:text-primary'
+                ]}
+              >
+                {link.label}
+              </a>
+              <button
+                class="mobile-dropdown-toggle p-3 text-text-muted hover:text-primary transition-colors cursor-pointer"
+                aria-label="Mở menu con"
+                aria-expanded="false"
+              >
+                <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            </div>
+            <div class="mobile-dropdown-content hidden pl-4 pb-2">
+              {link.children.map(child => (
+                <a
+                  href={child.href}
+                  class:list={[
+                    'block px-4 py-2 rounded-lg text-sm transition-colors duration-150',
+                    currentPath.startsWith(child.href)
+                      ? 'text-primary bg-primary/5 font-semibold'
+                      : 'text-text-muted hover:text-primary hover:bg-bg-light'
+                  ]}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
           <a
             href={link.href}
             class:list={[
@@ -135,5 +219,15 @@ const navLinks = [
     iconOpen?.classList.toggle('hidden');
     iconClose?.classList.toggle('hidden');
     btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  document.querySelectorAll('.mobile-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.closest('div')?.querySelector('.mobile-dropdown-content');
+      const icon = toggle.querySelector('svg');
+      content?.classList.toggle('hidden');
+      icon?.classList.toggle('rotate-180');
+      toggle.setAttribute('aria-expanded', String(!content?.classList.contains('hidden')));
+    });
   });
 </script>

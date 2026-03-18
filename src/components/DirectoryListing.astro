@@ -1,0 +1,37 @@
+---
+interface Child {
+  slug: string;
+  label: string;
+  type: 'listing' | 'pdf';
+}
+
+interface Props {
+  children: Child[];
+  basePath: string;
+}
+
+const { children, basePath } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {children.map(child => (
+    <a href={`${basePath}${child.slug}/`} class="group bg-white rounded-xl border border-border shadow-card hover:shadow-card-hover transition-all duration-300 p-6 flex items-start gap-4">
+      {child.type === 'listing' ? (
+        <div class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+        </div>
+      ) : (
+        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+          <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+      )}
+      <div class="min-w-0">
+        <h3 class="font-heading font-bold text-text-primary group-hover:text-primary transition-colors">{child.label}</h3>
+        <p class="text-text-muted text-xs mt-1">
+          {child.type === 'listing' ? 'Danh mục tài liệu' : 'Tài liệu PDF'}
+        </p>
+      </div>
+      <svg class="w-5 h-5 text-text-muted ml-auto shrink-0 mt-1 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+    </a>
+  ))}
+</div>

@@ -1,173 +1,223 @@
 <!DOCTYPE html>
 
-<html lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#003366",
-              "background-light": "#f5f7f8",
-              "background-dark": "#0f1923",
-            },
-            fontFamily: {
-              "display": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#003366",
+            "background-light": "#f5f7f8",
+            "background-dark": "#0f1923",
           },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
         },
-      }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    </style>
-<style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <style>
     body {
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+</head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
-<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden pb-20">
-<!-- Header -->
-<div class="flex items-center bg-white dark:bg-slate-900 p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 justify-between">
-<div class="text-primary dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
-<span class="material-symbols-outlined">arrow_back</span>
-</div>
-<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center truncate px-2">
-                VP Construction &amp; Testing
-            </h1>
-<div class="flex w-10 items-center justify-end">
-<button class="flex items-center justify-center text-primary dark:text-slate-100">
-<span class="material-symbols-outlined">search</span>
-</button>
-</div>
-</div>
-<!-- Hero Section / Stats -->
-<div class="p-4 bg-primary/5 dark:bg-primary/10">
-<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight mb-4">Năng Lực Công Ty</h2>
-<div class="flex flex-wrap gap-3">
-<div class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-primary text-white shadow-lg shadow-primary/20">
-<p class="text-white/80 text-sm font-medium">Thiết bị chuyên dụng</p>
-<p class="text-3xl font-bold">100+</p>
-</div>
-<div class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
-<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tiêu chuẩn áp dụng</p>
-<p class="text-primary dark:text-white text-3xl font-bold">ISO 17025</p>
-</div>
-</div>
-</div>
-<!-- Section 1: Equipment -->
-<div class="mt-6">
-<div class="flex items-center justify-between px-4 mb-4">
-<h2 class="text-slate-900 dark:text-white text-xl font-bold tracking-tight">Năng Lực Thiết Bị</h2>
-<span class="text-primary text-sm font-semibold">Xem tất cả</span>
-</div>
-<div class="flex overflow-x-auto gap-4 px-4 pb-4 scrollbar-hide no-scrollbar [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-<!-- Equipment Card 1 -->
-<div class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover" data-alt="Modern heavy duty universal testing machine in laboratory" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIXxG8EB3zzRqqbKs_h2MUp7eJb5nyMIvkBRzKqxfVSDgF4xpmHLIEudaHjmtJclnPif4MLooNx1JRr-ld40VDEfS63InRj908Bm4_HvYoWgecN4ghvIlPcSf6uT6P_hztWyCXV7U0--ajuHPyPVz5WaNbLTYgaXrEoac1oZYQjZHN9FlD0c-iK93cALxe9wvU9s_JUULWYWUtkL4Z4Aapo0GPxJpti-SOz5X9VVqa4BoQVjnU7yQUehI5JRYsQUPL7Z70FZdM7qAc");'></div>
-<div class="p-4">
-<p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy kéo nén vạn năng 1000kN</p>
-<p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Độ chính xác cao</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Phục vụ thí nghiệm cường độ cốt thép, mối nối cơ khí.</p>
-</div>
-</div>
-<!-- Equipment Card 2 -->
-<div class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover" data-alt="Large hydraulic concrete compression testing machine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDj0QuwqCioD1hEpz9ipOoxjF4JAv5VMATFyIywzQ6R5xmpwTEqw6pmkgva9J8G9muGhF8klytbvWG7jwfpcgEjr6Xrd39_XlglGzmFBi8UERnMPEU-i9HkhcU-JhGQhAbqVXQvqCpUSHxqxr3qJ6HWMKOvEES-yHOH8YECujG0xSaWN8U-KiBYs-cVEqnJWfsTqD300YqppP6eRdszxtQAO2QBCBcNupffTsDNqYvFzfUbifajyebO8oO44TdZY3U2wl04YNus2Hpe");'></div>
-<div class="p-4">
-<p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy nén bê tông 2000KN</p>
-<p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Tiêu chuẩn quốc tế</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Xác định cường độ nén của bê tông và các vật liệu xây dựng.</p>
-</div>
-</div>
-<!-- Equipment Card 3 -->
-<div class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover" data-alt="Professional ultrasonic concrete testing device from Italy" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAD-O75Fx6a0p5Vza4l6vqW9sbAMje8lHUbRIFSEHa1X89nBE1OaXmr6HU0LNSQJvW4Z6u6RXcxlkHGZuNVoTVLxWIiWUhOLkG1H0kXfzSfj2wJ1oOiLeG3gHav9txYIx5FBuaXjxJ941D1nvHTJKYtbiOfLfsnyORkho89xU5YpjnGlJ7whmiwLZuT7b-DaHULxkaUCuOBRHdlGd1DNRdLlR-ni6D75WD1k4iVUxrISFaJjmDcEsX9hbjSYo0R5Ru6AjIH7yJs0upL");'></div>
-<div class="p-4">
-<p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy siêu âm bê tông (Italy)</p>
-<p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Nhập khẩu chính hãng</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Kiểm tra khuyết tật bê tông bằng phương pháp không phá hủy.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Section 2: Team -->
-<div class="mt-8 px-4">
-<h2 class="text-slate-900 dark:text-white text-xl font-bold tracking-tight mb-4">Đội Ngũ Nhân Sự</h2>
-<div class="grid grid-cols-1 gap-4">
-<!-- Personnel Card 1 -->
-<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="size-16 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden shrink-0">
-<img alt="Profile photo of Chief of Lab" class="w-full h-full object-cover" data-alt="Professional portrait of a male engineer in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5FN4H2yX9bkf9KUGpNLNGjH0IYa10SBqFgWdiB0Ep0s_X0PlrzfL4pSA_2P4y9HfGvDdIf5vbADwEKFo-L59FFZEJApn-s9Lzb-7BQ-ehmlS6-pSDNV-av_tWn_5e0kn6ai6Cuev9Ph5DPOS9_b43SQPWxjqsUaz_9FHrqrsrH9unKjdoB3VIpr7MgoQfdPY8B9eANU2Zzk5PWFOpj0d2P5Jcx1wA_CYJGFGGijAZhH6Z4fmTbd-PcmGNBqsUPgtB0FfjxX2zE5IR"/>
-</div>
-<div class="flex-1">
-<h3 class="text-slate-900 dark:text-white font-bold text-base">KS. Nguyễn Văn Thành</h3>
-<p class="text-primary dark:text-primary/80 text-xs font-semibold uppercase tracking-wider">Trưởng phòng thí nghiệm</p>
-<div class="mt-2 flex flex-wrap gap-1">
-<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full">ISO/IEC 17025</span>
-<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded-full">15+ Năm Kinh Nghiệm</span>
-</div>
-</div>
-</div>
-<!-- Personnel Card 2 -->
-<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-<div class="size-16 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden shrink-0">
-<img alt="Profile photo of Deputy Chief" class="w-full h-full object-cover" data-alt="Professional portrait of a male engineer with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTxfrbJN33f8h3Up-126SK6aRRI6aczRRRxxmv6Mwru55MnBL5_x70W8UMpD8OSQK1x5OfxZRnm2qTEGFN7XksMGK6T25O3VOb4bF7Tt67TvJqsCWhRB_yWB5fBqcX1CuiVBWhoc3u64btRmGhUTaOkjQDfrvAfYDLvkL424q0SRzgqyyzcf8uwYfS8L3xE1Bv_GZ6JJ9H865d_j5-6F1R4sjwA7uaLPbJB-2wNfcE88FkvhQB_eANdnz_L-IeeAxTF024KDvKi4SC"/>
-</div>
-<div class="flex-1">
-<h3 class="text-slate-900 dark:text-white font-bold text-base">KS. Lương Thanh Sơn</h3>
-<p class="text-primary dark:text-primary/80 text-xs font-semibold uppercase tracking-wider">Phó phòng thí nghiệm</p>
-<div class="mt-2 flex flex-wrap gap-1">
-<span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full">Chuyên Gia Kiểm Định</span>
-<span class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded-full">Quản Lý Chất Lượng</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Accreditation Footer -->
-<div class="mt-8 px-4 pb-8">
-<div class="bg-slate-900 text-white p-6 rounded-2xl flex flex-col items-center text-center">
-<span class="material-symbols-outlined text-4xl mb-2 text-primary/40">verified</span>
-<p class="text-sm text-slate-400 font-medium">Cam kết chất lượng</p>
-<h3 class="text-lg font-bold mt-1">Hệ thống quản lý chất lượng phù hợp tiêu chuẩn ISO/IEC 17025:2017</h3>
-<div class="mt-4 flex gap-4 opacity-70">
-<span class="material-symbols-outlined">architecture</span>
-<span class="material-symbols-outlined">precision_manufacturing</span>
-<span class="material-symbols-outlined">science</span>
-</div>
-</div>
-</div>
-<!-- Bottom Navigation -->
-<div class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pb-4 pt-2 z-20">
-<div class="flex gap-2">
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined">home</span>
-<p class="text-[10px] font-bold uppercase tracking-tight">Trang chủ</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-white" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-<p class="text-[10px] font-bold uppercase tracking-tight">Thiết bị</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined">groups</span>
-<p class="text-[10px] font-bold uppercase tracking-tight">Nhân sự</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
-<span class="material-symbols-outlined">contact_phone</span>
-<p class="text-[10px] font-bold uppercase tracking-tight">Liên hệ</p>
-</a>
-</div>
-</div>
-</div>
-</body></html>
+  <div
+    class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden pb-20">
+    <!-- Header -->
+    <div
+      class="flex items-center bg-white dark:bg-slate-900 p-4 sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800 justify-between">
+      <div class="text-primary dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </div>
+      <h1
+        class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center truncate px-2">
+        VP Construction &amp; Testing
+      </h1>
+      <div class="flex w-10 items-center justify-end">
+        <button class="flex items-center justify-center text-primary dark:text-slate-100">
+          <span class="material-symbols-outlined">search</span>
+        </button>
+      </div>
+    </div>
+    <!-- Hero Section / Stats -->
+    <div class="p-4 bg-primary/5 dark:bg-primary/10">
+      <h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight mb-4">Năng Lực Công Ty</h2>
+      <div class="flex flex-wrap gap-3">
+        <div class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-primary text-white shadow-lg shadow-primary/20">
+          <p class="text-white/80 text-sm font-medium">Thiết bị chuyên dụng</p>
+          <p class="text-3xl font-bold">100+</p>
+        </div>
+        <div
+          class="flex flex-1 flex-col gap-1 rounded-xl p-5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm">
+          <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Tiêu chuẩn áp dụng</p>
+          <p class="text-primary dark:text-white text-3xl font-bold">ISO 17025</p>
+        </div>
+      </div>
+    </div>
+    <!-- Section 1: Equipment -->
+    <div class="mt-6">
+      <div class="flex items-center justify-between px-4 mb-4">
+        <h2 class="text-slate-900 dark:text-white text-xl font-bold tracking-tight">Năng Lực Thiết Bị</h2>
+        <span class="text-primary text-sm font-semibold">Xem tất cả</span>
+      </div>
+      <div
+        class="flex overflow-x-auto gap-4 px-4 pb-4 scrollbar-hide no-scrollbar [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+        <!-- Equipment Card 1 -->
+        <div
+          class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover"
+            data-alt="Modern heavy duty universal testing machine in laboratory"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIXxG8EB3zzRqqbKs_h2MUp7eJb5nyMIvkBRzKqxfVSDgF4xpmHLIEudaHjmtJclnPif4MLooNx1JRr-ld40VDEfS63InRj908Bm4_HvYoWgecN4ghvIlPcSf6uT6P_hztWyCXV7U0--ajuHPyPVz5WaNbLTYgaXrEoac1oZYQjZHN9FlD0c-iK93cALxe9wvU9s_JUULWYWUtkL4Z4Aapo0GPxJpti-SOz5X9VVqa4BoQVjnU7yQUehI5JRYsQUPL7Z70FZdM7qAc");'>
+          </div>
+          <div class="p-4">
+            <p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy kéo nén vạn năng 1000kN</p>
+            <p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Độ chính xác cao</p>
+            <p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Phục vụ thí nghiệm cường độ cốt thép, mối nối cơ
+              khí.</p>
+          </div>
+        </div>
+        <!-- Equipment Card 2 -->
+        <div
+          class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover"
+            data-alt="Large hydraulic concrete compression testing machine"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDj0QuwqCioD1hEpz9ipOoxjF4JAv5VMATFyIywzQ6R5xmpwTEqw6pmkgva9J8G9muGhF8klytbvWG7jwfpcgEjr6Xrd39_XlglGzmFBi8UERnMPEU-i9HkhcU-JhGQhAbqVXQvqCpUSHxqxr3qJ6HWMKOvEES-yHOH8YECujG0xSaWN8U-KiBYs-cVEqnJWfsTqD300YqppP6eRdszxtQAO2QBCBcNupffTsDNqYvFzfUbifajyebO8oO44TdZY3U2wl04YNus2Hpe");'>
+          </div>
+          <div class="p-4">
+            <p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy nén bê tông 2000KN</p>
+            <p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Tiêu chuẩn quốc tế</p>
+            <p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Xác định cường độ nén của bê tông và các vật liệu
+              xây dựng.</p>
+          </div>
+        </div>
+        <!-- Equipment Card 3 -->
+        <div
+          class="flex flex-col shrink-0 w-72 bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="w-full aspect-video bg-slate-200 dark:bg-slate-700 bg-center bg-no-repeat bg-cover"
+            data-alt="Professional ultrasonic concrete testing device from Italy"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAD-O75Fx6a0p5Vza4l6vqW9sbAMje8lHUbRIFSEHa1X89nBE1OaXmr6HU0LNSQJvW4Z6u6RXcxlkHGZuNVoTVLxWIiWUhOLkG1H0kXfzSfj2wJ1oOiLeG3gHav9txYIx5FBuaXjxJ941D1nvHTJKYtbiOfLfsnyORkho89xU5YpjnGlJ7whmiwLZuT7b-DaHULxkaUCuOBRHdlGd1DNRdLlR-ni6D75WD1k4iVUxrISFaJjmDcEsX9hbjSYo0R5Ru6AjIH7yJs0upL");'>
+          </div>
+          <div class="p-4">
+            <p class="text-slate-900 dark:text-white text-base font-bold leading-snug">Máy siêu âm bê tông (Italy)</p>
+            <p class="text-primary dark:text-primary/80 text-sm font-medium mt-1 italic">Nhập khẩu chính hãng</p>
+            <p class="text-slate-500 dark:text-slate-400 text-xs mt-2">Kiểm tra khuyết tật bê tông bằng phương pháp
+              không phá hủy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section 2: Team -->
+    <div class="mt-8 px-4">
+      <h2 class="text-slate-900 dark:text-white text-xl font-bold tracking-tight mb-4">Đội Ngũ Nhân Sự</h2>
+      <div class="grid grid-cols-1 gap-4">
+        <!-- Personnel Card 1 -->
+        <div
+          class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="size-16 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden shrink-0">
+            <img alt="Profile photo of Chief of Lab" class="w-full h-full object-cover"
+              data-alt="Professional portrait of a male engineer in a suit"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5FN4H2yX9bkf9KUGpNLNGjH0IYa10SBqFgWdiB0Ep0s_X0PlrzfL4pSA_2P4y9HfGvDdIf5vbADwEKFo-L59FFZEJApn-s9Lzb-7BQ-ehmlS6-pSDNV-av_tWn_5e0kn6ai6Cuev9Ph5DPOS9_b43SQPWxjqsUaz_9FHrqrsrH9unKjdoB3VIpr7MgoQfdPY8B9eANU2Zzk5PWFOpj0d2P5Jcx1wA_CYJGFGGijAZhH6Z4fmTbd-PcmGNBqsUPgtB0FfjxX2zE5IR" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-slate-900 dark:text-white font-bold text-base">KS. Nguyễn Văn Thành</h3>
+            <p class="text-primary dark:text-primary/80 text-xs font-semibold uppercase tracking-wider">Trưởng phòng thí
+              nghiệm</p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full">ISO/IEC
+                17025</span>
+              <span
+                class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded-full">2+
+                Năm Kinh Nghiệm</span>
+            </div>
+          </div>
+        </div>
+        <!-- Personnel Card 2 -->
+        <div
+          class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+          <div class="size-16 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden shrink-0">
+            <img alt="Profile photo of Deputy Chief" class="w-full h-full object-cover"
+              data-alt="Professional portrait of a male engineer with glasses"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTxfrbJN33f8h3Up-126SK6aRRI6aczRRRxxmv6Mwru55MnBL5_x70W8UMpD8OSQK1x5OfxZRnm2qTEGFN7XksMGK6T25O3VOb4bF7Tt67TvJqsCWhRB_yWB5fBqcX1CuiVBWhoc3u64btRmGhUTaOkjQDfrvAfYDLvkL424q0SRzgqyyzcf8uwYfS8L3xE1Bv_GZ6JJ9H865d_j5-6F1R4sjwA7uaLPbJB-2wNfcE88FkvhQB_eANdnz_L-IeeAxTF024KDvKi4SC" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-slate-900 dark:text-white font-bold text-base">KS. Lương Thanh Sơn</h3>
+            <p class="text-primary dark:text-primary/80 text-xs font-semibold uppercase tracking-wider">Phó phòng thí
+              nghiệm</p>
+            <div class="mt-2 flex flex-wrap gap-1">
+              <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full">Chuyên Gia Kiểm
+                Định</span>
+              <span
+                class="px-2 py-0.5 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] font-bold rounded-full">Quản
+                Lý Chất Lượng</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Accreditation Footer -->
+    <div class="mt-8 px-4 pb-8">
+      <div class="bg-slate-900 text-white p-6 rounded-2xl flex flex-col items-center text-center">
+        <span class="material-symbols-outlined text-4xl mb-2 text-primary/40">verified</span>
+        <p class="text-sm text-slate-400 font-medium">Cam kết chất lượng</p>
+        <h3 class="text-lg font-bold mt-1">Hệ thống quản lý chất lượng phù hợp tiêu chuẩn ISO/IEC 17025:2017</h3>
+        <div class="mt-4 flex gap-4 opacity-70">
+          <span class="material-symbols-outlined">architecture</span>
+          <span class="material-symbols-outlined">precision_manufacturing</span>
+          <span class="material-symbols-outlined">science</span>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Navigation -->
+    <div
+      class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md px-4 pb-4 pt-2 z-20">
+      <div class="flex gap-2">
+        <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+          <span class="material-symbols-outlined">home</span>
+          <p class="text-[10px] font-bold uppercase tracking-tight">Trang chủ</p>
+        </a>
+        <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary dark:text-white" href="#">
+          <span class="material-symbols-outlined"
+            style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+          <p class="text-[10px] font-bold uppercase tracking-tight">Thiết bị</p>
+        </a>
+        <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+          <span class="material-symbols-outlined">groups</span>
+          <p class="text-[10px] font-bold uppercase tracking-tight">Nhân sự</p>
+        </a>
+        <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+          <span class="material-symbols-outlined">contact_phone</span>
+          <p class="text-[10px] font-bold uppercase tracking-tight">Liên hệ</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
