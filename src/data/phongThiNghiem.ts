@@ -2,6 +2,8 @@ export interface LabNode {
   slug: string;
   label: string;
   type: 'listing' | 'pdf';
+  // Nhúng trực tiếp tất cả PDF thay vì hiển thị dạng card khi có nhiều file
+  embed?: boolean;
   pdfs?: { name: string; path: string }[];
   children?: LabNode[];
 }
@@ -17,7 +19,12 @@ export const labTree: LabNode[] = [
     slug: '1-cong-bo-cong-khai-thong-tin',
     label: '1. Công bố công khai thông tin',
     type: 'pdf',
-    pdfs: [{ name: 'Công bố công khai năng lực PTN', path: '/phong-thi-nghiem/1-cong-bo-cong-khai-thong-tin/cong-bo-cong-khai-nang-luc-ptn.pdf' }],
+    embed: true,
+    pdfs: [
+      { name: 'Công bố công khai năng lực PTN', path: '/phong-thi-nghiem/1-cong-bo-cong-khai-thong-tin/cong-bo-cong-khai-nang-luc-ptn.pdf' },
+      { name: 'Công bố NLHĐ thí nghiệm XD cty VP', path: '/phong-thi-nghiem/1-cong-bo-cong-khai-thong-tin/cong-bo-nlhd-thi-nghiem-xd-cty-vp.pdf' },
+      { name: 'CV công bố trạm TNHT DA KDC Thuỷ Nguyên - Hải Phòng', path: '/phong-thi-nghiem/1-cong-bo-cong-khai-thong-tin/cv-cong-bo-tram-tnht-da-kdc-thuy-nguyen-hai-phong.pdf' },
+    ],
   },
   {
     slug: '2-ho-so-phap-ly-cac-quyet-dinh',
@@ -210,6 +217,7 @@ export const labTree: LabNode[] = [
             pdfs: [
               { name: 'Hiệu chuẩn máy Sài Gòn', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-newtech/kiem-dinh-hieu-chuan-may/hieu-chuan-may-sai-gon.pdf' },
               { name: 'Kiểm định Sài Gòn 2025', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-newtech/kiem-dinh-hieu-chuan-may/kiem-dinh-sai-gon-2025.pdf' },
+              { name: 'Hiệu chuẩn máy Sài Gòn 2026', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-newtech/kiem-dinh-hieu-chuan-may/hieu-chuan-may-sai-gon-2026.pdf' },
             ],
           },
           {
@@ -259,7 +267,10 @@ export const labTree: LabNode[] = [
             slug: 'kiem-dinh-hieu-chuan-may',
             label: 'Kiểm định, hiệu chuẩn máy',
             type: 'pdf',
-            pdfs: [{ name: 'Hiệu chuẩn máy Hải Phòng 2025', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-vlasta-thuy-nguyen/kiem-dinh-hieu-chuan-may/hieu-chuan-may-hai-phong-2025.pdf' }],
+            pdfs: [
+              { name: 'Hiệu chuẩn máy Hải Phòng 2025', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-vlasta-thuy-nguyen/kiem-dinh-hieu-chuan-may/hieu-chuan-may-hai-phong-2025.pdf' },
+              { name: 'Hiệu chuẩn máy Hải Phòng 2026', path: '/phong-thi-nghiem/6-ho-so-tram-thi-nghiem-hien-truong/tram-thi-nghiem-hien-truong-du-an-vlasta-thuy-nguyen/kiem-dinh-hieu-chuan-may/hieu-chuan-may-hai-phong-2026.pdf' },
+            ],
           },
         ],
       },

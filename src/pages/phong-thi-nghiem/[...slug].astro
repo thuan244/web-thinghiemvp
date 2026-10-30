@@ -28,7 +28,7 @@ const currentPath = `${base}phong-thi-nghiem/${segments.join('/')}/`;
 
   <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-12">
     {node.type === 'pdf' && node.pdfs ? (
-      <PdfEmbed title={node.label} pdfs={node.pdfs} />
+      <PdfEmbed title={node.label} pdfs={node.pdfs} embed={node.embed} />
     ) : node.children ? (
       <DirectoryListing children={node.children} basePath={currentPath} />
     ) : null}
